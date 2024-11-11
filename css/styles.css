@@ -1,19 +1,43 @@
-body {
+html, body {
+    height: 100%;
+    width:  100%;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 :root {
-    /* We don't render anything in the screen (other than the background) more than this width */
-    --app_blue: #1976d3;
+    /* Color of the app in general: footer, header, etc. */
+    --app_dark_blue: #1976d3;
+    --app_light_blue: #BBDEFB;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 header {
-    background-color: var(--app_blue);
+    background-color: var(--app_dark_blue);
     color: white;
-    padding: 1rem;
+}
+
+header a:hover{
+    color: yellow;
+}
+
+.header_footer_padding {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
@@ -31,10 +55,27 @@ nav ul li a {
     text-decoration: none;
 }
 
-#hero {
-    background-color: #f4f4f4;
-    padding: 2rem;
+#hero{
+    background-image: url("../img/hero1.jpeg");
+    background-size: cover;
+    background-position: center;
     text-align: center;
+    color: white;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Smooth transition between images */
+    transition: background-image 1s ease-in-out;
+}
+#hero h1{
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 3em;
+}
+#hero p{
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
 }
 
 .subsection {
@@ -42,10 +83,9 @@ nav ul li a {
 }
 
 footer {
-    background-color: var(--app_blue);
+    background-color: var(--app_dark_blue);
     color: white;
     text-align: center;
     padding: 1rem;
-    width: 100%;
     bottom: 0;
 }
