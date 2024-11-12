@@ -6,6 +6,9 @@
     <title>LithoExplore</title>
     <link rel="icon" href="img/favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Include the of de Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
 </head>
 <body>
     <header class="header_footer_padding">
@@ -29,10 +32,27 @@
             <p>Transforma tu Aprendizaje en Ciencias de la Tierra con Tecnología Innovadora</p>
         </section>
         <script src="js/hero.js"></script>
+
         <section id="description" class="subsection">
-            <h2>Descripción</h2>
-            <p>LithoExplore es un proyecto para diseñar una innovadora aplicación para estudiantes de bachillerato y universitarios que deseen dominar las ciencias de la Tierra de manera práctica y eficiente. Con una amplia gama de funciones avanzadas, se convierte en un laboratorio que permite a los usuarios almacenar, analizar y visualizar datos geológicos de forma intuitiva.</p>
+            <div>
+                <div class="text_container">
+                    <div class="text">
+                        <h1>Descripción</h1>
+                        <p><b>LithoExplore</b> es un proyecto para diseñar una innovadora aplicación para estudiantes de bachillerato y universitarios que deseen dominar las ciencias de la Tierra de manera práctica y eficiente. Con una amplia gama de funciones avanzadas, se convierte en un laboratorio que permite a los usuarios almacenar, analizar y visualizar datos geológicos de forma intuitiva.</p>
+                    </div>
+                </div>
+                <div style="width:5%"></div>
+                <div class="carousel">
+                    <div><img src="img/hero1.jpeg" alt="Imagen 1"></div>
+                    <div><img src="img/hero2.jpeg" alt="Imagen 2"></div>
+                    <div><img src="img/hero3.jpeg" alt="Imagen 3"></div>
+                </div>
+            </div>
         </section>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+        <script src="js/carousel.js"></script>
+
         <section id="features" class="subsection">
             <h2>¿Qué te ofrecemos?</h2>
             <ul>
@@ -47,11 +67,13 @@
                 <li>Realidad Aumentada (RA): Ofrece experiencias inmersivas que enriquecen el proceso educativo.</li>
             </ul>
         </section>
+
         <section id="contact" class="subsection">
             <h2>Contáctanos</h2>
             <p>Somos una empresa internacional dedicada a proveer alternativas de productos alimenticios y del agro.</p>
         </section>
     </main>
+
     <footer class="header_footer_padding">
         <p>&copy; 2024 LithoExplore. Todos los derechos reservados.</p>
     </footer>

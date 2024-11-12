@@ -9,7 +9,7 @@ html, body {
 :root {
     /* Color of the app in general: footer, header, etc. */
     --app_dark_blue: #1976d3;
-    --app_light_blue: #BBDEFB;
+    --app_light_blue: #47a7f6;
 }
 
 main{
@@ -55,6 +55,10 @@ nav ul li a {
     text-decoration: none;
 }
 
+.subsection {
+    padding: 2rem;
+}
+
 #hero{
     background-image: url("../img/hero1.jpeg");
     background-size: cover;
@@ -78,8 +82,53 @@ nav ul li a {
     font-size: 1.5em;
 }
 
-.subsection {
+#description {
+    margin-top: 3%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#description > div{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 2rem;
+}
+.subsection .text_container{
+    height: 100%;
+    width: 48%;
+    padding-right: 2rem;
+    background-color: var(--app_light_blue);
+}
+.subsection .text{
+    padding: 7%;
+    height: 100%;
+    width: 90%;
+    color: white;
+}
+.subsection .carousel{
+    height: 100%;
+    width: 47%;
+}
+.subsection .carousel div{
+    width: 100%;
+    height: 100%;
+}
+
+.slick-slide img {
+    width: 100%;
+    height: 100%;
+    /* The image covers all the container */
+    object-fit: cover; 
+}
+
+.slick-prev:before, .slick-next:before {
+    background: var(--app_dark_blue);
+}
+.slick-prev, .slick-next {
+    z-index: 2; /* Asegura que los botones estén por encima de otros elementos */
 }
 
 footer {
