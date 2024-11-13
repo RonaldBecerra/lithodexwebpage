@@ -9,7 +9,11 @@ html, body {
 :root {
     /* Color of the app in general: footer, header, etc. */
     --app_dark_blue: #1976d3;
-    --app_light_blue: #47a7f6;
+    --app_light_blue: #5ca6f0;
+}
+
+p, li{
+    font-size: 18px;
 }
 
 main{
@@ -90,6 +94,7 @@ nav ul li a {
     align-items: center;
 }
 #description > div{
+    height: 100%;
     width: 75%;
     display: flex;
     justify-content: space-between;
@@ -97,18 +102,27 @@ nav ul li a {
     padding: 2rem;
 }
 .subsection .text_container{
+    position: relative;
     height: 100%;
     width: 48%;
     padding-right: 2rem;
-    background-color: var(--app_light_blue);
+    background-color: var(--app_dark_blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subsection h2{
+    color: var(--app_dark_blue);
 }
 .subsection .text{
     padding: 7%;
-    height: 100%;
-    width: 90%;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .subsection .carousel{
+    background-color: darkgray;
     height: 100%;
     width: 47%;
 }
@@ -121,14 +135,107 @@ nav ul li a {
     width: 100%;
     height: 100%;
     /* The image covers all the container */
-    object-fit: cover; 
+    object-fit: contain; 
 }
 
 .slick-prev:before, .slick-next:before {
-    background: var(--app_dark_blue);
+    color: darkgray !important;
 }
 .slick-prev, .slick-next {
     z-index: 2; /* Asegura que los botones estén por encima de otros elementos */
+}
+
+.custom-bullets {
+    list-style: none; /* Elimina las viñetas predeterminadas */
+    padding: 0;
+}
+
+.custom-bullets li {
+    position: relative;
+    padding-left: 30px; /* Espacio para la flecha */
+    margin-bottom: 10px; /* Espacio entre elementos */
+}
+
+li b{
+    color: var(--app_dark_blue);
+}
+
+.custom-bullets li::before {
+    content: '➔'; /* Flecha como viñeta */
+    color: var(--app_light_blue); /* Color de la flecha */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1em; /* Tamaño de la flecha */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact {
+    padding: 2rem;
+    background-color: #403c3c;
+    text-align: center;
+    color: white;
+}
+
+.contact-grid {
+    padding-left: 15%;
+    padding-right: 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.contact-info li {
+    margin-bottom: 1rem;
+    font-size: 1.2em;
+}
+
+.contact-info a {
+    color: #1976d3;
+    text-decoration: none;
+    color: yellow;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    padding-left: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-items: left;
+}
+
+.social-media img {
+    width: 60px;
+    height: 60px;
+    background-color: #1976d3;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.social-media a{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.social-media p{
+    margin-left: 5%;
 }
 
 footer {
