@@ -7,13 +7,19 @@ html, body {
 }
 
 :root {
-    /* Color of the app in general: footer, header, etc. */
-    --app_dark_blue: #1976d3;
-    --app_light_blue: #5ca6f0;
+    /* Colors of the app */
+    --app_dark_blue: #003366;
+    --app_medium_blue: #1776D4;
+    --app_light_blue: #64B5F6;
+    --app_gray: #9BB7CD;
+    --app_red: #EB1736;
+    --app_ocher: #FFBA42;
+    --app_orange: #FF6600;
+    --app_orange_hover: #FF8533;
 }
 
 p, li{
-    font-size: 18px;
+    font-size: 17.5px;
 }
 
 main{
@@ -22,25 +28,27 @@ main{
     justify-content: center;
 }
 
-header {
-    background-color: var(--app_dark_blue);
-    color: white;
-}
-
 header a:hover{
-    color: yellow;
+    color: var(--app_ocher);
 }
 
-.header_footer_padding {
+footer {
+    color: white;
+    text-align: center;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.header_footer {
+    background-color: var(--app_medium_blue);
+    color: white;
     padding-right: 1rem;
     padding-left: 1rem;
-    padding-top: 0.1rem;
-    padding-bottom: 0.1rem;
 }
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -48,16 +56,37 @@ nav ul {
     list-style: none;
     padding: 0;
 }
-
 nav ul li {
     display: inline;
-    margin-right: 1rem;
+    margin-right: 2rem;
+    position: relative; /* Necessary for the arrow*/
 }
-
 nav ul li a {
     color: white;
     text-decoration: none;
 }
+nav ul li a::after {
+    content: '▼';
+    font-size: 0.6rem;
+    margin-left: 0.3rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header_button {
+    background-color: gray;/*var(--app_orange);*/
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 1rem;
+}
+/*
+.header_button:hover {
+    background-color: var(--app_orange_hover);
+}*/
 
 .subsection {
     padding: 2rem;
@@ -69,7 +98,7 @@ nav ul li a {
     background-position: center;
     text-align: center;
     color: white;
-    height: 60vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,7 +231,7 @@ li b{
 .contact-info a {
     color: #1976d3;
     text-decoration: none;
-    color: yellow;
+    color: var(--app_ocher);
 }
 
 .contact-info a:hover {
@@ -238,10 +267,64 @@ li b{
     margin-left: 5%;
 }
 
-footer {
-    background-color: var(--app_dark_blue);
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    bottom: 0;
+/* Estilos para pantallas anchas (PCs) */ 
+/*@media (min-width: 1024px) { 
+    body { 
+        background-color: lightblue; 
+    } 
+    header, main, footer { 
+        padding: 20px; 
+    } 
+    h1 { 
+        font-size: 2.5em; 
+    } 
+} */
+/* Estilos para pantallas medianas (tablets) */ 
+/*@media (min-width: 768px) and (max-width: 1023px) { 
+    body { 
+        background-color: lightgreen; 
+    } 
+    header, main, footer { 
+        padding: 15px; 
+    } 
+    h1 { 
+        font-size: 2em; 
+    } 
+} */
+/* Estilos para pantallas estrechas (móviles) */ 
+/*@media (max-width: 767px) { 
+    body { 
+        background-color: lightcoral; 
+    } 
+    header, main, footer { 
+        padding: 10px; 
+    } 
+    h1 { 
+        font-size: 1.5em; 
+    } 
+}*/
+/* Estilos para relación de aspecto vertical (más alto que ancho) */ 
+/*@media (max-aspect-ratio: 1/1) { 
+    body { 
+        background-color: lightyellow; 
+    } 
+    header, main, footer { 
+        padding: 10px; 
+    } 
+    h1 { 
+        font-size: 1.8em; 
+    } 
+} */
+/* Estilos para relación de aspecto horizontal (más ancho que alto) */ 
+/*@media (min-aspect-ratio: 1/1) { 
+    body { 
+        background-color: lightgray; 
+    } 
+    header, main, footer { 
+        padding: 15px; 
+    } 
+    h1 { 
+        font-size: 2.2em; 
+    }
 }
+*/
