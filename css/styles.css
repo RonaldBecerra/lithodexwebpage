@@ -75,6 +75,7 @@ nav ul li a::after {
 }
 
 .header_button {
+    font-size: 19px;
     background-color: gray;/*var(--app_orange);*/
     color: white;
     padding: 0.5rem 1rem;
@@ -116,39 +117,24 @@ nav ul li a::after {
 }
 
 #description {
+    font-family: "verdana";
+    color: #4f443c;
     margin-top: 3%;
-    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#description p{
+    text-align: center;
+    font-size: 22px;
 }
 #description > div{
-    height: 100%;
     width: 75%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 2rem;
 }
-.subsection .text_container{
-    position: relative;
-    height: 100%;
-    width: 48%;
-    padding-right: 2rem;
-    background-color: var(--app_dark_blue);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .subsection h2{
     color: var(--app_dark_blue);
-}
-.subsection .text{
-    padding: 7%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 .subsection .carousel{
     background-color: darkgray;
