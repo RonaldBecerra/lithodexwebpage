@@ -1,0 +1,25 @@
+/* Estilos para la sección del equipo */ 
+#team { 
+    text-align: center; 
+    padding: 20px;
+} 
+.team-row { 
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+} 
+.team-member { 
+    margin: 10px;
+    text-align: center; 
+} 
+.team-member img { 
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+} 
+.team-member p { 
+    margin-top: 10px; 
+    font-size: 16px; 
+    font-weight: bold; 
+}
