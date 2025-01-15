@@ -18,18 +18,27 @@ html, body {
     --app_orange_hover: #FF8533;
 }
 
-p, li{
-    font-size: 17.5px;
+.centered_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-main{
-    display: flex;
+p {
+    font-size: 1.3em;
+}
+footer p, li{
+    font-size: 1.15em;
+}
+
+article{
     flex-direction: column;
     justify-content: center;
 }
 
 header a:hover{
     color: var(--app_ocher);
+    cursor: pointer;
 }
 
 footer {
@@ -46,7 +55,7 @@ footer {
     padding-left: 1rem;
 }
 
-.container {
+.header_container {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -66,7 +75,6 @@ nav ul li a {
     text-decoration: none;
 }
 nav ul li a::after {
-    content: '▼';
     font-size: 0.6rem;
     margin-left: 0.3rem;
     position: absolute;
@@ -90,100 +98,18 @@ nav ul li a::after {
 }*/
 
 .subsection {
-    padding: 2rem;
-}
-
-#hero{
-    background-image: url("../img/hero1.jpeg");
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: white;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* Smooth transition between images */
-    transition: background-image 1s ease-in-out;
-}
-#hero h1{
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 3em;
-}
-#hero p{
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 1.5em;
-}
-
-#description {
     font-family: "verdana";
     color: #4f443c;
-    margin-top: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#description p{
-    text-align: center;
-    font-size: 22px;
-}
-#description > div{
-    width: 75%;
-    padding: 2rem;
 }
 
 .subsection h2{
     color: var(--app_dark_blue);
 }
-.subsection .carousel{
-    background-color: darkgray;
-    height: 100%;
-    width: 47%;
-}
-.subsection .carousel div{
-    width: 100%;
-    height: 100%;
-}
 
-.slick-slide img {
-    width: 100%;
-    height: 100%;
-    /* The image covers all the container */
-    object-fit: contain; 
-}
-
-.slick-prev:before, .slick-next:before {
-    color: darkgray !important;
-}
-.slick-prev, .slick-next {
-    z-index: 2; /* Asegura que los botones estén por encima de otros elementos */
-}
-
-.custom-bullets {
-    list-style: none; /* Elimina las viñetas predeterminadas */
-    padding: 0;
-}
-
-.custom-bullets li {
-    position: relative;
-    padding-left: 30px; /* Espacio para la flecha */
-    margin-bottom: 10px; /* Espacio entre elementos */
-}
-
-li b{
+.subsection h1{
+    text-align: center;
     color: var(--app_dark_blue);
-}
-
-.custom-bullets li::before {
-    content: '➔'; /* Flecha como viñeta */
-    color: var(--app_light_blue); /* Color de la flecha */
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 1.1em; /* Tamaño de la flecha */
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-size: 1.8em;
 }
 
 #contact {
