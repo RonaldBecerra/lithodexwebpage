@@ -25,14 +25,16 @@
     font-size: 1.5em;
 }
 
-#description {
+.content_section {
     color: #4f443c;
     text-align: center;
 }
 
-#description > div{
+.content_section > div{
     width: 75%;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .subsection .carousel{
