@@ -1,0 +1,23 @@
+name: Deploy to Netcup
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Deploy to FTP
+      uses: SamKirkland/FTP-Deploy-Action@3.2.0
+      with:
+        server: ftp://hosting213473.a440a.netcup.net
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./
+        server-dir: /httpdocs/
